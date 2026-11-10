@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="vi" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      DVAN GROUP - Mobile Application Studio | Google Play Developer
+    </title>
+    <meta
+      name="description"
+      content="Trang giới thiệu chính thức của DVAN GROUP - Studio phát triển ứng dụng di động Flutter, Android & iOS chất lượng cao, tối ưu trải nghiệm người dùng."
+    />
+    <meta
+      name="keywords"
+      content="DVAN GROUP, Flutter Developer, Android Apps, iOS Apps, Google Play Developer"
+    />
+    <meta name="author" content="DVAN GROUP" />
+
+    <!-- Open Graph / Facebook / Google Play -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="DVAN GROUP - Mobile Application Studio"
+    />
+    <meta
+      property="og:description"
+      content="Khám phá các ứng dụng di động thông minh, tiện ích và bảo mật từ DVAN GROUP."
+    />
+    <meta property="og:site_name" content="DVAN GROUP" />
+
+    <!-- Google Fonts: Be Vietnam Pro & Inter (Chuẩn tiếng Việt, tối ưu hiển thị công nghệ cao) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>"
+    />
+  </head>
+  <body>
+    <div class="bg-glow-top"></div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="index.html" class="brand-logo">
+          <div class="logo-icon">
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polygon
+                points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"
+              ></polygon>
+            </svg>
+          </div>
+          <span
+            ><span class="bind-store-name">DVAN GROUP</span>
+            <span class="logo-badge">DEV</span></span
+          >
+        </a>
+
+        <nav>
+          <ul class="nav-links" id="navLinks">
+            <li>
+              <a href="#home" class="nav-link active" data-i18n="nav.home"
+                >Trang chủ</a
+              >
+            </li>
+            <li>
+              <a href="#apps" class="nav-link" data-i18n="nav.apps">Ứng dụng</a>
+            </li>
+            <li>
+              <a href="#about" class="nav-link" data-i18n="nav.about"
+                >Về chúng tôi</a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="nav-link" data-i18n="nav.contact"
+                >Hỗ trợ & Liên hệ</a
+              >
+            </li>
+            <li>
+              <a
+                href="privacy-policy.html"
+                class="nav-link"
+                data-i18n="nav.privacy"
+                >Chính sách riêng tư</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <!-- Language Selector Dropdown -->
+          <div class="lang-selector-dropdown" id="langSelector">
+            <button
+              class="lang-btn"
+              id="langToggleBtn"
+              type="button"
+              aria-expanded="false"
+              aria-label="Chọn ngôn ngữ"
+            >
+              <span class="lang-flag" id="currentLangFlag">🇻🇳</span>
+              <span class="lang-text" id="currentLangText">Tiếng Việt</span>
+              <span class="lang-arrow">▾</span>
+            </button>
+            <ul class="lang-menu" id="langMenu">
+              <li>
+                <button type="button" class="lang-option active" data-lang="vi">
+                  🇻🇳 Tiếng Việt
+                </button>
+              </li>
+              <li>
+                <button type="button" class="lang-option" data-lang="en">
+                  🇺🇸 English
+                </button>
+              </li>
+              <li>
+                <button type="button" class="lang-option" data-lang="zh">
+                  🇨🇳 简体中文
+                </button>
+              </li>
+              <li>
+                <button type="button" class="lang-option" data-lang="ja">
+                  🇯🇵 日本語
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <button
+            class="theme-toggle-btn"
+            id="themeToggleBtn"
+            title="Chuyển chế độ sáng/tối"
+          >
+            <span id="themeIcon">☀️</span>
+          </button>
+          <a
+            href="#apps"
+            class="btn btn-primary btn-sm"
+            data-i18n="nav.viewApps"
+            >Xem ứng dụng</a
+          >
+          <button
+            class="mobile-menu-btn"
+            id="mobileMenuBtn"
+            aria-label="Toggle menu"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-pill">
+          <span class="pulse-dot"></span>
+          <span data-i18n="hero.badge">Google Play Verified Developer</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span data-i18n="hero.title1">Xây dựng trải nghiệm di động</span>
+          <br />
+          <span class="gradient-text" data-i18n="hero.titleHighlight"
+            >Hiện Đại • Tiện Ích • Tối Ưu</span
+          >
+        </h1>
+
+        <p class="hero-desc bind-bio" data-i18n="hero.desc">
+          DVAN GROUP chuyên thiết kế & phát triển các ứng dụng di động trên nền
+          tảng Flutter (Android & iOS) với sứ mệnh mang đến trải nghiệm mượt mà,
+          tiện ích, giải quyết các nhu cầu thiết thực trong công việc và đời
+          sống hàng ngày.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#apps" class="btn btn-primary">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+            <span data-i18n="hero.btnExplore">Khám phá Ứng dụng</span>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              ></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span data-i18n="hero.btnContact">Liên hệ phát triển</span>
+          </a>
+        </div>
+
+        <!-- Live Highlights / Stats -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-value bind-stat-downloads">100K+</div>
+            <div class="stat-label" data-i18n="stats.downloads">
+              Lượt cài đặt
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value bind-stat-rating">4.8★</div>
+            <div class="stat-label" data-i18n="stats.rating">
+              Đánh giá trung bình
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value bind-stat-apps">4+</div>
+            <div class="stat-label" data-i18n="stats.apps">
+              Ứng dụng hoạt động
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value bind-stat-countries">15+</div>
+            <div class="stat-label" data-i18n="stats.countries">
+              Quốc gia sử dụng
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Apps Showcase Section -->
+    <section class="apps-section" id="apps">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="apps.tag">Kho Ứng Dụng</span>
+          <h2 class="section-title" data-i18n="apps.title">
+            Danh mục Ứng dụng của chúng tôi
+          </h2>
+          <p class="section-subtitle" data-i18n="apps.subtitle">
+            Các ứng dụng được xây dựng cẩn trọng, tập trung vào hiệu năng cao,
+            giao diện thân thiện và bảo mật thông tin.
+          </p>
+        </div>
+
+        <!-- Toolbar: Categories + Live Search -->
+        <div class="toolbar">
+          <div class="filter-pills">
+            <button
+              class="filter-btn active"
+              data-category="all"
+              data-i18n="apps.filterAll"
+            >
+              Tất cả
+            </button>
+            <button
+              class="filter-btn"
+              data-category="Công cụ"
+              data-i18n="apps.filterTools"
+            >
+              Công cụ
+            </button>
+            <button
+              class="filter-btn"
+              data-category="Tài chính"
+              data-i18n="apps.filterFinance"
+            >
+              Tài chính
+            </button>
+            <button
+              class="filter-btn"
+              data-category="Năng suất"
+              data-i18n="apps.filterProductivity"
+            >
+              Năng suất
+            </button>
+          </div>
+
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input
+              type="text"
+              id="searchAppsInput"
+              placeholder="Tìm kiếm ứng dụng..."
+            />
+          </div>
+        </div>
+
+        <!-- Apps Grid (Populated by js/main.js & js/apps-data.js) -->
+        <div class="apps-grid" id="appsGrid">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us & Tech Stack Section -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-text">
+            <span class="section-tag" data-i18n="about.tag">Về DVAN GROUP</span>
+            <h3 data-i18n="about.title">
+              Cam kết chất lượng & Trải nghiệm người dùng
+            </h3>
+            <p data-i18n="about.p1">
+              Chúng tôi luôn tin rằng một ứng dụng tốt không chỉ nằm ở tính
+              năng, mà còn ở tốc độ phản hồi nhanh, giao diện trực quan và sự
+              tôn trọng quyền riêng tư của người dùng.
+            </p>
+            <p data-i18n="about.p2">
+              Với nền tảng công nghệ đa nền tảng Flutter kết hợp kiến trúc Clean
+              Architecture, mỗi sản phẩm ra mắt đều trải qua các vòng kiểm thử
+              nghiêm ngặt trước khi đến tay người dùng trên Google Play và App
+              Store.
+            </p>
+
+            <div class="highlight-box">
+              <h4 data-i18n="about.highlightTitle">
+                💡 Dễ dàng cập nhật & Đóng góp ý kiến
+              </h4>
+              <p data-i18n="about.highlightDesc">
+                Bạn có ý tưởng hoặc cần hỗ trợ về ứng dụng? Đội ngũ luôn sẵn
+                sàng lắng nghe phản hồi của bạn để nâng cấp sản phẩm ngày một
+                tốt hơn.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <h4
+              style="
+                font-size: 1.15rem;
+                margin-bottom: 20px;
+                color: var(--text-main);
+              "
+              data-i18n="about.coreTech"
+            >
+              Công nghệ cốt lõi
+            </h4>
+            <div class="tech-cards-grid" id="techStackGrid">
+              <!-- Rendered from STORE_INFO.techStack -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Support Section -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <span class="section-tag" data-i18n="contact.tag"
+            >Trung tâm Hỗ trợ</span
+          >
+          <h2 class="contact-title" data-i18n="contact.title">
+            Bạn có câu hỏi hoặc cần hỗ trợ?
+          </h2>
+          <p class="contact-desc" data-i18n="contact.desc">
+            Nếu bạn gặp sự cố kỹ thuật trong quá trình sử dụng ứng dụng, cần hỗ
+            trợ tài khoản hoặc muốn hợp tác phát triển sản phẩm, hãy gửi email
+            trực tiếp cho chúng tôi.
+          </p>
+
+          <div class="contact-methods">
+            <a
+              href="mailto:dvangroup.dream@gmail.com"
+              class="contact-method-pill bind-email"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                ></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              dvangroup.dream@gmail.com
+            </a>
+          </div>
+
+          <p
+            style="font-size: 0.88rem; color: var(--text-dim)"
+            data-i18n="contact.note"
+          >
+            Phản hồi thường được xử lý trong vòng 24 - 48 giờ làm việc.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="index.html" class="brand-logo" style="margin-bottom: 12px">
+              <div class="logo-icon">🚀</div>
+              <span><span class="bind-store-name">DVAN GROUP</span></span>
+            </a>
+            <p data-i18n="footer.brandDesc">
+              Nhà phát triển ứng dụng di động độc lập. Tập trung vào các sản
+              phẩm tiện ích, năng suất và giải pháp số thông minh.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4 data-i18n="footer.navTitle">Điều hướng</h4>
+            <ul class="footer-links">
+              <li><a href="#home" data-i18n="nav.home">Trang chủ</a></li>
+              <li><a href="#apps" data-i18n="nav.apps">Kho ứng dụng</a></li>
+              <li><a href="#about" data-i18n="nav.about">Về chúng tôi</a></li>
+              <li><a href="#contact" data-i18n="nav.contact">Liên hệ</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 data-i18n="footer.legalTitle">Pháp lý & Chính sách</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="privacy-policy.html" data-i18n="footer.privacy"
+                  >Chính sách quyền riêng tư (Privacy)</a
+                >
+              </li>
+              <li>
+                <a href="terms.html" data-i18n="footer.terms"
+                  >Điều khoản sử dụng (Terms)</a
+                >
+              </li>
+              <li>
+                <a
+                  href="privacy-policy.html#user-data"
+                  data-i18n="footer.userData"
+                  >Bảo vệ dữ liệu người dùng</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            © <span id="currentYear">2024</span>
+            <span class="bind-store-name">DVAN GROUP</span>. All rights
+            reserved.
+          </div>
+          <div>
+            <span data-i18n="footer.officialSite"
+              >Trang web chính thức cho tài khoản Google Play Developer:</span
+            >
+            <strong class="bind-dev-name">Dvanit</strong>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- App Detail Modal Popup -->
+    <div
+      class="modal-overlay"
+      id="appModalOverlay"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div class="modal-card">
+        <button
+          class="modal-close-btn"
+          id="modalCloseBtn"
+          aria-label="Đóng popup"
+        >
+          ✕
+        </button>
+        <div id="modalDynamicContent">
+          <!-- Rendered dynamically by openAppModal() in js/main.js -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/apps-data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
+</html>
